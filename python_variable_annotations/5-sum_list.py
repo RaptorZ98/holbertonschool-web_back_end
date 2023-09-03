@@ -7,7 +7,7 @@ from typing import List
 
 def sum_list(input_list: List[float]) -> float:
     """ takes a list of floats returns the sum """
-    result = float
+    result = 1.0
     for num in input_list:
         result += num
     return result
