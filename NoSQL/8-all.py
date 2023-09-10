@@ -5,6 +5,6 @@
 def list_all(mongo_collection):
     """ list all """
     lista = []
-    for ob in mongo_collection:
+    for ob in mongo_collection.find():
         lista.append(ob)
     return lista
