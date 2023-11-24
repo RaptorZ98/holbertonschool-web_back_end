@@ -15,6 +15,11 @@ class Server:
     def __init__(self):
         self.__dataset = None
 
+    def index_range(page: int, page_size: int) -> Tuple:
+        """ index range """
+        tup: int = page_size * page - page_size
+        return (tup, page_size * page)
+
     def dataset(self) -> List[List]:
         """Cached dataset
         """
@@ -37,7 +42,4 @@ class Server:
             page_data = data[start+1:end+1]
             return page_data
 
-    def index_range(page: int, page_size: int) -> Tuple:
-        """ index range """
-        tup: int = page_size * page - page_size
-        return (tup, page_size * page)
+   
