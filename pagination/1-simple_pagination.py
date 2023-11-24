@@ -15,7 +15,7 @@ class Server:
     def __init__(self):
         self.__dataset = None
 
-    def index_range(page: int, page_size: int) -> Tuple:
+    def index_range(iself, page: int, page_size: int) -> Tuple:
         """ index range """
         tup: int = page_size * page - page_size
         return (tup, page_size * page)
@@ -41,5 +41,3 @@ class Server:
             start, end = self.index_range(page, page_size)
             page_data = data[start+1:end+1]
             return page_data
-
-   
