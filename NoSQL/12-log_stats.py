@@ -14,4 +14,4 @@ if __name__ == '__main__':
     for method in methods:
         print(f"\tmethod {method}: {collect.count_documents({'method': method})}")
     message = 'status check'
-    print(f"{c.count_documents({'method': 'GET', 'path': '/status'})} {message}")
+    print(f"{collect.count_documents({'method': 'GET', 'path': '/status'})} {message}")
